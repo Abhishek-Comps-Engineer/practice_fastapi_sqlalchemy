@@ -5,8 +5,6 @@ from .config import settings
 
 # DATABASE_URL "postgresql://<username>:<password>@/,ip-address/hostname>/<database_name>"
 
-# SQLALCHEMY_DATABASE_URL = "postgresql://postgres:7058@localhost/fastapi"
-
 SQLALCHEMY_DATABASE_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}/{settings.database_name}"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
